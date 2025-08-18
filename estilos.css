@@ -26,20 +26,52 @@ p {
 }
 
 
-/*INICIO*/
-.inicio h1{
-    text-align: center;    /* Centra el texto */
-    color:#51592a;           /* Color del texto */
-    font-size: 10em;      /* Tamaño de fuente grande */
-    margin-top: 20px;      /* Espacio arriba */
-    font-family: "Lacquer", system-ui; /* Fuente personalizada */
+/*----------------------------------INICIO--------------------------------------------------*/
+
+.layout-index {
+    padding: 20px; /* margen interno del main */
+    background-color: #f0f0f0; /* Color de fondo */
+    }
+.layout-index h1 {
+    color: #51592a; /* Color del texto */
+    font-size: 10em; /* Tamaño de fuente grande */
+    margin-top: 20px; /* Espacio arriba */
+    font-family:  "Lacquer", system-ui; /* Fuente personalizada */
+    text-align: center; /* Centra el texto */
 }
-.inicio h2{
-    color:#aa5437;           /* Color del texto */
-    font-size: 2em;      /* Tamaño de fuente grande */
-    margin-top: 30px;
-    padding-left: 20px;      /* Espacio arriba */
-    font-family: "Homemade Apple", cursive; /* Fuente personalizada */
+.layout-index h2 {
+    color: #638d5a; /* Color del texto */
+    font-size: 3em; /* Tamaño de fuente grande */
+    font-family: "Just Me Again Down Here", cursive; /* Fuente personalizada */
+    text-align: center; /* Centra el texto */
+}
+.layout-index p {
+    color: #626056; /* Color del texto */
+    font-size: 1.5em; /* Tamaño de fuente */
+    line-height: 1.5; /* Espacio entre líneas */
+    margin: 20px; /* Margen alrededor del párrafo */
+    font-family:'Times New Roman', Times, serif;
+    text-align: center; /* Centra el texto */
+}
+.portada-img {
+    width: 80%;          /* ocupa 80% del ancho del contenedor */
+    height: 400px;       /* altura fija para recorte */
+    object-fit: cover;   /* recorta la imagen manteniendo proporciones */
+    object-position: center; /* centra la parte visible */
+    display: block;
+    margin: 10px auto 20px; /* centra horizontalmente y agrega margen inferior */
+    border-radius: 8px;  /* opcional, bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+/* Contenedor de las 3 imágenes */
+.container-index {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 10px; /* espacio entre imágenes */
+}
+.container-index img {
+    width: 100%;
+    display: block;
 }
 
 /*------------NAVBAR (Bootstrap y estilos propios) ------------------*/
@@ -65,7 +97,7 @@ p {
 }
 
 
-/*Estilos del dropdown*/
+/*DROPDOWN*/
 .mi-navbar .dropdown-menu {
   background-color: #21373a; /* Color de fondo del dropdown */
 }
@@ -95,25 +127,91 @@ p {
 
 
 
-/*--------------------Para el html de la pagina quienes somos----------------------------*/
-/*El titulo principal de la pagina quienes somos*/
-.quienes-somos h2 {
-    color:#a08064;           /* Color del texto */
-    font-size: 4em;      /* Tamaño de fuente grande */
-    font-family: "Libre Bodoni", serif; /* Fuente personalizada */
+/*--------------------QUIENES SOMOS----------------------------*/
+.layout-quienes-somos {
+    margin: 20px; /* margen alrededor del main */
+    padding: 0; /* margen interno del main */
 }
-.quienes-somos h3 {
-    color:#4e5c30; 
-    text-align: center;          /* Color del texto */
-    font-size: 5em;      /* Tamaño de fuente grande */
+.grid-quienes {
+    margin:15px; /* margen alrededor del main */
+    padding: 15px; /* margen interno del main */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+    gap: 30px; /* espacio entre texto e imágenes */
+    align-items: start;
+}
+
+/* Columna de texto */
+.texto-quienes {
+    text-align: center; /* Centra el texto */
+}
+/*textos*/
+.texto-quienes p {
+    color: #817e76; /* Color del texto */
+    font-size: 2em; /* Tamaño de fuente */
+    line-height: 1.5; /* Espacio entre líneas */
+    margin: 20px; /* Margen alrededor del párrafo */
+    font-family: "Crimson Pro", serif; /* Fuente personalizada */
+}
+.texto-quienes h1 {
+    color: #aa5437; /* Color del texto */
+    font-size: 4em; /* Tamaño de fuente grande */
+    font-family: "Just Me Again Down Here", cursive; /* Fuente personalizada */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+.texto-quienes h2 {
+    color: #aa5437; /* Color del texto */
+    font-size: 3em; /* Tamaño de fuente grande */
     font-family: "Just Me Again Down Here", cursive; /* Fuente personalizada */
 }
+.texto-quienes h3 {
+    color: #aa5437; /* Color del texto */
+    font-size: 2.5em; /* Tamaño de fuente */
+    font-family: "Fredericka the Great", serif; /* Fuente personalizada */
+}
+.layout-quienes-somos h1 {
+    text-align: center; /* Centra el texto */
+    margin-top: 0; /* Elimina el margen superior */
+    }
+/* Columna de imágenes */
+.imagenes-quienes {
+    display: grid;
+    grid-auto-rows: 250px;
+    gap: 15px;
+    justify-items: center;
+    position: relative;
+    padding-bottom: 80px; /* espacio extra debajo de la última imagen */
+}
 
-/*-----------------FORMULARIO DEL CONTACTO------------------*/
-/*.contact-form {
-}*/
+.imagenes-quienes img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Desplazamientos suaves para efecto escalonado */
+.imagenes-quienes img:nth-child(2) {
+    margin-top: 30px; /* Desplazamiento hacia abajo */
+    margin-right:150px; /* Desplazamiento a la derecha */
+}
+
+.imagenes-quienes img:nth-child(3) {
+    margin-top: 60px;
+}
+
+
+/*-----------------CONTACTO------------------*/
 
 /*Seccion de contacto*/
+.contacto h1 {
+    color:#6e706e;    /* Color del texto */
+    font-size: 8em;      /* Tamaño de fuente grande */
+    font-family:"Fredericka the Great", serif; /* Fuente personalizada */
+    text-align: center; /* Centra el texto */
+}
 .contacto h2 {
     color:#aa5437;    /* Color del texto */
     font-size: 3em;      /* Tamaño de fuente grande */
@@ -121,13 +219,76 @@ p {
 }
 .contacto p {
     color:#817e76; /* Color del texto */
-    font-size: 2em; /* Tamaño de fuente */
+    font-size: 1.5em; /* Tamaño de fuente */
     line-height: 1.5; /* Espacio entre líneas */
     margin: 20px; /* Margen alrededor del párrafo */
     font-family: "Crimson Pro", serif; /* Fuente personalizada */
 }
 
-/*-----------------Para el pie de pagina-- FOOTER----------------------*/
+
+/* Contenedor del formulario + imagen */
+.contacto {
+    padding: 20px; /* margen interno del main */
+    margin: 20px; /* margen alrededor del main */
+}
+.container-formulario {
+    display: flex;
+    flex-direction: row;   /* formulario a la izquierda, imagen a la derecha */
+    align-items: center; /* centra verticalmente */
+    flex-wrap: wrap;       /* se apila en pantallas pequeñas */
+    gap: 60px;       /* espacio entre formulario e imagen */
+    padding-bottom: 20px; /* espacio extra debajo */
+}
+
+/* ------------------Formulario----------------- */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(131, 12, 12);
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #a72828;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #5f0909;
+}
+
+/* Imagen de pagina de contacto */
+.contact-img {
+    max-width: 400px;
+    max-height: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+
+/*-----------------Para el pie de pagina--> FOOTER----------------------*/
 footer{
     background-color:#ccbcaa; /* Color de fondo */
     text-align: center; /* Centra el texto */
@@ -148,13 +309,19 @@ footer h4 {
     font-family: "Lacquer", system-ui; /* Fuente personalizada */
 }
 
-/*-------------------LAYOUT PRODUCTOS----------------------*/
+/*-------------------LAYOUT PRODUCTOS(AFECTA A LOS 3 HTML DE SKATES-LONG-ACCS----------------------*/
 .layout-productos {
   background-color: white; /* Color de fondo */
 }
+.layout-productos__main {
+  padding: 20px; /* margen interno del main */
+  margin: 20px; /* margen alrededor del main */
+  text-align: center; /* Centra el texto */
+}
 
-/*-----------------------CARRUSEL DE LOS PRODUCTOS-------------------*/
+/*-----------------------PRODUCTOS-------------------*/
 
+/*carrusel de productos*/
 .carousel {
   max-width: 800px;
   margin: 0 auto;
@@ -223,9 +390,6 @@ footer h4 {
 
 
 
-
-
-
 /*-----------------------------RESPONSIVE-------------------------------------------*/
 /*CELULARES*/
 /*Responsive del Navbar*/
@@ -254,4 +418,18 @@ footer h4 {
 @media (max-width: 768px) {
     .text-center h5 { font-size: 1.2rem; }
     .text-center p { font-size: 0.9rem; }
+}
+
+/*Responsive contacto*/
+@media (max-width: 768px) {
+    .container-formulario {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 768px) {
+    .container-formulario {
+        flex-direction: column;
+        align-items: center;
+    }
 }
