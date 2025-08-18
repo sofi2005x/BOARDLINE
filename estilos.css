@@ -1,0 +1,257 @@
+/*Reseteamos el CSS para que no haya conflictos entre navegadores*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* hace que el padding y el border no aumenten el tamaño total del elemento */
+}
+
+html {
+  font-size: 16px; /* base para los em */
+}
+
+/*------------EDITAR TODOS LOS TITULOS (EXCEPCION DEL DE INICIO)------------------*/
+  h1{
+   color:#6e706e;           /* Color del texto */
+    font-size: 7em;      /* Tamaño de fuente grande */
+    margin-top: 20px;      /* Espacio arriba */
+    font-family: "Fredericka the Great", serif; /* Fuente personalizada */
+}
+/*-------------EDITAR TODOS LOS PARRAFOS (consistente)--------------------*/
+p {
+  color: #626056; /* Color del texto */
+  font-size: 1.5em; /* Tamaño de fuente */
+  line-height: 1.5; /* Espacio entre líneas */
+  margin: 20px; /* Margen alrededor del párrafo */
+  font-family: "Noto Sans Mono", monospace; /* Fuente personalizada */
+}
+
+
+/*INICIO*/
+.inicio h1{
+    text-align: center;    /* Centra el texto */
+    color:#51592a;           /* Color del texto */
+    font-size: 10em;      /* Tamaño de fuente grande */
+    margin-top: 20px;      /* Espacio arriba */
+    font-family: "Lacquer", system-ui; /* Fuente personalizada */
+}
+.inicio h2{
+    color:#aa5437;           /* Color del texto */
+    font-size: 2em;      /* Tamaño de fuente grande */
+    margin-top: 30px;
+    padding-left: 20px;      /* Espacio arriba */
+    font-family: "Homemade Apple", cursive; /* Fuente personalizada */
+}
+
+/*------------NAVBAR (Bootstrap y estilos propios) ------------------*/
+
+.mi-navbar {
+  background-color: #848274; /* el fondo se estira todo el ancho */
+  --bs-navbar-color: #3d3814;
+  --bs-navbar-hover-color: #ffe6e6;
+  --bs-navbar-padding-x: 2rem;
+  --bs-navbar-padding-y: 1rem;
+}
+/*Estilos de letras de la navbar*/
+.mi-navbar .nav-link {
+  font-family: "Crimson Pro", serif;   
+  font-size: 1.5rem;                  /* Tamaño de la letra */
+  font-weight: 500;                   /* Grosor de la letra */
+}
+/*Estilos de la navbar al pasar el mouse*/
+.mi-navbar .nav-link:hover, /*Links del navbar dentro de la clase mi-navbar*/
+.mi-navbar .nav-link:focus {
+  background-color: #cec0b0; /* Color de fondo al pasar el mouse */
+  border-radius: 2rem; /* Bordes redondeados */
+}
+
+
+/*Estilos del dropdown*/
+.mi-navbar .dropdown-menu {
+  background-color: #21373a; /* Color de fondo del dropdown */
+}
+.mi-navbar .dropdown-item {
+  font-family: "Crimson Pro", serif;   
+  font-size: 1.5rem;                  /* Tamaño de la letra */
+  font-weight: 500;                   /* Grosor de la letra */
+  color: #f0dcc4;                     /* Color del texto */
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: #c6c4b4; /* fondo al pasar el mouse de los dropdowns */
+  color: #3d3814;             /* texto al pasar el mouse */
+}
+/*Estilos del boton de la navbar*/
+.mi-navbar .navbar-toggler {
+  border-color: #3d3814;
+  border-radius: 0,5 rem;} 
+
+/*-------------------------LOGO DE LA NAVBAR-------------------------*/
+.navbar-brand img {
+  width: 100px; /* Ancho del logo */
+  height: auto; /* Altura automática para mantener la proporción */
+  margin-right: 10px; /* Espacio a la derecha del logo */
+  border-radius: 50%;     /* Bordes redondos ----- > Otra alternativa es usar en el html la clase de BS "rounded-circle"*/ 
+  box-shadow:  0 4px 6px rgba(0,0,0,0.4); /* Sombra para dar profundidad */}
+
+
+
+
+/*--------------------Para el html de la pagina quienes somos----------------------------*/
+/*El titulo principal de la pagina quienes somos*/
+.quienes-somos h2 {
+    color:#a08064;           /* Color del texto */
+    font-size: 4em;      /* Tamaño de fuente grande */
+    font-family: "Libre Bodoni", serif; /* Fuente personalizada */
+}
+.quienes-somos h3 {
+    color:#4e5c30; 
+    text-align: center;          /* Color del texto */
+    font-size: 5em;      /* Tamaño de fuente grande */
+    font-family: "Just Me Again Down Here", cursive; /* Fuente personalizada */
+}
+
+/*-----------------FORMULARIO DEL CONTACTO------------------*/
+/*.contact-form {
+}*/
+
+/*Seccion de contacto*/
+.contacto h2 {
+    color:#aa5437;    /* Color del texto */
+    font-size: 3em;      /* Tamaño de fuente grande */
+    font-family: "Just Me Again Down Here", cursive; /* Fuente personalizada */
+}
+.contacto p {
+    color:#817e76; /* Color del texto */
+    font-size: 2em; /* Tamaño de fuente */
+    line-height: 1.5; /* Espacio entre líneas */
+    margin: 20px; /* Margen alrededor del párrafo */
+    font-family: "Crimson Pro", serif; /* Fuente personalizada */
+}
+
+/*-----------------Para el pie de pagina-- FOOTER----------------------*/
+footer{
+    background-color:#ccbcaa; /* Color de fondo */
+    text-align: center; /* Centra el texto */
+}
+footer a {
+    color: #544c2c; /* Color del enlace */
+    font-size: 1.5em; /* Tamaño de fuente */
+    text-decoration: none; /* Quita el subrayado */
+}
+footer p {
+    color:#9c8065; /* Color del texto */
+    font-size: 1.2em; /* Tamaño de fuente */
+    font-family: "Libre Bodoni", serif; /* Fuente personalizada */
+}
+footer h4 {
+    color: #ad8559; /* Color del texto */
+    font-size: 3em; /* Tamaño de fuente */
+    font-family: "Lacquer", system-ui; /* Fuente personalizada */
+}
+
+/*-------------------LAYOUT PRODUCTOS----------------------*/
+.layout-productos {
+  background-color: white; /* Color de fondo */
+}
+
+/*-----------------------CARRUSEL DE LOS PRODUCTOS-------------------*/
+
+.carousel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  height: 400px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* invierte blanco a negro */
+}
+/* Object-fit ---> Ajusta el contenido  dentro de su contenedor (Evitamos que se deforme la imagen)*/
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantiene la proporción de la imagen */
+
+}
+
+/*Editamos el texto que esta por debajo de cada carrusel---> descripcion/precio*/
+.text-center {
+    background: #e0dcd2; 
+    padding: 40px;
+    margin: 15rem;
+    border-radius: 2px;
+    color:#34352c;
+    font-family: 'Times New Roman', Times, serif;
+}
+.text-center p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.text-center h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*Aspectos del boton para comprar*/
+.btn-success {
+    background: linear-gradient(45deg, #801c1c, #bb1d1d); /*color y profndidad*/
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s; /*Movimiento de transicion*/
+}
+
+.btn-success:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/*Efectos para acercar imagen si pasamos mouse(hover) por los productos*/
+.carousel-item img:hover {
+    transform: scale(1.05);
+    transition: transform 0.8s ease;
+}
+
+/*lineas de separcion decorativas*/
+.linea-punteada {
+    border:none;        /* quitamos el borde normal */
+    border-top: 5px dotted #093d15; /* línea punteada(dotted) de color verde */
+    width: 80%;            /* No quiero que se adapte todo el contenedor */
+    margin: 20px auto;  /* 20px → aplica margen arriba y abajo (top y bottom)*/
+}                       /*auto ajusta dinámicamente el margen izquierdo y derecho (left y right) para centrar la línea en el contenedor padre */
+
+
+
+
+
+
+/*-----------------------------RESPONSIVE-------------------------------------------*/
+/*CELULARES*/
+/*Responsive del Navbar*/
+@media (min-width: 767px) { /* lg breakpoint */
+  .mi-navbar .navbar-collapse {
+    display: flex !important;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .mi-navbar .nav-link:hover,
+  .mi-navbar .nav-link:focus {
+    border-radius: 0; /* en mobile sin borde redondeado */
+  }
+}
+/*PANTALLAS GRANDES*/
+/*Responsive del Navbar*/
+@media (min-width: 992px) {
+  .mi-navbar .navbar-collapse {
+    display: flex !important;
+    justify-content: center;
+  }
+}
+
+/*Responsive de los carruseles*/
+@media (max-width: 768px) {
+    .text-center h5 { font-size: 1.2rem; }
+    .text-center p { font-size: 0.9rem; }
+}
