@@ -23,7 +23,7 @@ h1 {
   /* Fuente personalizada */
 }
 
-/*-------------EDITAR TODOS LOS PARRAFOS (consistente)--------------------*/
+/*-------------EDITAR TODOS LOS PARRAFOS (algunos estilos se pisan)-------------------*/
 p {
   color: #626056;
   /* Color del texto */
@@ -685,7 +685,7 @@ footer h4 {
         width: 90%;
     }
 
-    /* Inputs, textarea y botón */
+    /* Inputs, text-area y botón */
     .contact-form input,
     .contact-form textarea,
     .contact-form button {
@@ -750,7 +750,7 @@ footer h4 {
         width: 95%;
     }
 }
-/*Textos*/
+/*Textos aparte que no los toma el contenedor*/
 @media (max-width: 768px) {
   p {
     font-size: 1rem;
