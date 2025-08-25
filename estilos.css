@@ -171,7 +171,7 @@ p {
 /*Estilos del boton de la navbar*/
 .mi-navbar .navbar-toggler {
   border-color: #3d3814;
-  border-radius: 0, 5 rem;
+  border-radius: 0.5 rem;
 }
 
 /*-------------------------LOGO DE LA NAVBAR-------------------------*/
@@ -460,7 +460,9 @@ footer h4 {
 }
 
 .carousel-item {
-  height: 400px;
+  aspect-ratio: 16 / 9;
+  /* se adapta a la pantalla manteniendo proporción */
+  max-height: 400px;
 }
 
 .carousel-control-prev-icon,
@@ -481,10 +483,12 @@ footer h4 {
 .text-center {
   background: #e0dcd2;
   padding: 40px;
-  margin: 15rem;
+  margin: 1rem auto;
   border-radius: 2px;
   color: #34352c;
   font-family: "Times New Roman", Times, serif;
+  max-width: 800px;
+  /* límite de ancho */
 }
 
 .text-center p {
@@ -537,9 +541,10 @@ footer h4 {
 
 /*----------------MOBILE---------------------*/
 /* USAMOS MAX-WIDTH ---> un maximo de 768px aproximadamente */
-/*------------responsive index---------------------*/
 
 @media (max-width: 768px) {
+
+  /*------------responsive index---------------------*/
   /* Ajuste de títulos y párrafos */
   .layout-index h1 {
     font-size: 3rem;
@@ -578,41 +583,8 @@ footer h4 {
     /* altura máxima para evitar que se estiren */
     object-fit: cover;
   }
-}
 
-/*------------footer---------------------*/
-@media (max-width: 768px) {
-  footer h4 {
-    font-size: 2rem;
-  }
-
-  footer p {
-    font-size: 1rem;
-    /* ajusta párrafos */
-  }
-
-  footer a {
-    font-size: 1.2rem;
-    /* enlaces más pequeños */
-  }
-
-  .footer-redes {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    /* espacio entre íconos */
-    margin: 10px 0;
-  }
-
-  .footer-redes a i {
-    font-size: 1.8rem;
-    /* íconos más pequeños */
-  }
-}
-
-/*------------ quienes somos---------------------*/
-
-@media (max-width: 768px) {
+  /*------------ quienes somos---------------------*/
   /* Grid se convierte en una sola columna */
   .grid-quienes {
     grid-template-columns: 1fr;
@@ -648,121 +620,149 @@ footer h4 {
   .imagenes-quienes img {
     width: 90%;
     height: auto;
-    margin: 10px 0 !important; /* evita conflictos con el margen */
+    margin: 10px 0 !important;
+    /* evita conflictos con el margen */
     /* elimina desplazamientos escalonados (van uno abajo del otro) */
   }
-}
 
-/*------------ contacto---------------------*/
-@media (max-width: 768px) {
-    /* Ajuste de títulos y subtítulos */
-    .contacto h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
 
-    .contacto h2 {
-        font-size: 2rem;
-        text-align: center;
-        margin: 10px 0;
-    }
+  /*------------ contacto---------------------*/
+  /* Ajuste de títulos y subtítulos */
+  .contacto h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
 
-    .contacto p {
-        font-size: 1rem;
-    }
+  .contacto h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px 0;
+  }
 
-    /* Contenedor de formulario + imagen */
-    .container-formulario {
-        display: flex;
-        flex-direction: column; /* apilar verticalmente */
-        align-items: center;
-        gap: 20px;
-        padding: 10px;
-    }
+  .contacto p {
+    font-size: 1rem;
+  }
 
-    /* Formulario */
-    .contact-form form {
-        width: 90%;
-    }
+  /* Contenedor de formulario + imagen */
+  .container-formulario {
+    display: flex;
+    flex-direction: column;
+    /* apilar verticalmente */
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
 
-    /* Inputs, text-area y botón */
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form button {
-        width: 100%;
-    }
+  /* Formulario */
+  .contact-form form {
+    width: 90%;
+  }
 
-    /* Imagen */
-    .contact-img {
-        max-width: 90%;
-        height: auto;
-    }
+  /* Inputs, text-area y botón */
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+  }
 
-    /* Google Maps */
-    .contacto iframe {
-        width: 100%;
-        height: 250px; /* más compacto en móvil */
-    }
-}
+  /* Imagen */
+  .contact-img {
+    max-width: 90%;
+    height: auto;
+  }
 
-/*------------PRODUCTOS (LOS TRES SON IGUALES)---------------------*/
+  /* Google Maps */
+  .contacto iframe {
+    width: 100%;
+    height: 250px;
+    /* más compacto en móvil */
+  }
 
-@media (max-width: 768px) {
+  /*------------PRODUCTOS (LOS TRES SON IGUALES)---------------------*/
+  /* Carrusel más compacto */
+  .carousel {
+    max-width: 100%;
+  }
 
-    /* Carrusel más compacto */
-    .carousel {
-        max-width: 100%;
-    }
+  .carousel-item {
+    aspect-ratio: 4 / 3;
+    max-height: 250px;
+  }
 
-    .carousel-item {
-        height: 250px; /* menos altura en móvil */
-    }
+  .carousel-item img {
+    height: 100%;
+    object-fit: contain;
+  }
 
-    .carousel-item img {
-        height: 100%;
-        object-fit: contain;
-    }
+  /* Texto debajo del carrusel */
+  .text-center {
+    margin: 1rem 0;
+    /* menos espacio alrededor */
+    padding: 20px;
+    border-radius: 5px;
+  }
 
-    /* Texto debajo del carrusel */
-    .text-center {
-        margin: 1rem 0; /* menos espacio alrededor */
-        padding: 20px;
-        border-radius: 5px;
-    }
-    /*titulo de cada producto*/
-    .text-center h5 {
-        font-size: 1.8rem;
-    }
-    /*parafo de cada producto descriptivo*/
-    .text-center p {
-        font-size: 1rem;
-    }
+  /*titulo de cada producto*/
+  .text-center h5 {
+    font-size: 1.8rem;
+  }
 
-    /* Botón comprar */
-    .btn-success {
-        width: 80%; /* ocupa todo el ancho disponible */
-        font-size: 0.9rem;
-        padding: 10px;
-    }
+  /*parafo de cada producto descriptivo*/
+  .text-center p {
+    font-size: 1rem;
+  }
 
-    /* Línea punteada */
-    .linea-punteada {
-        width: 95%;
-    }
-}
-/*Textos aparte que no los toma el contenedor*/
-@media (max-width: 768px) {
+  /* Botón comprar */
+  .btn-success {
+    width: 80%;
+    /* ocupa todo el ancho disponible */
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  /* Línea punteada */
+  .linea-punteada {
+    width: 95%;
+  }
+
+  /*Textos aparte que no los toma el contenedor*/
   p {
     font-size: 1rem;
     margin: 10px;
   }
 
   h1 {
-        font-size: 2rem; /* más pequeño en móvil */
-        text-align: center;
-        margin: 20px 0;
-    }
+    font-size: 2rem;
+    /* más pequeño en móvil */
+    text-align: center;
+    margin: 20px 0;
+  }
 
+  /*------------footer---------------------*/
+  footer h4 {
+    font-size: 2rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+    /* ajusta párrafos */
+  }
+
+  footer a {
+    font-size: 1.2rem;
+    /* enlaces más pequeños */
+  }
+
+  .footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* espacio entre íconos */
+    margin: 10px 0;
+  }
+
+  .footer-redes a i {
+    font-size: 1.8rem;
+    /* íconos más pequeños */
+  }
 }
-
-
