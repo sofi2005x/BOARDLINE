@@ -22,122 +22,145 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Fredericka+the+Great&family=Homemade+Apple&family=Just+Me+Again+Down+Here&family=Lacquer&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Londrina+Sketch&display=swap"
         rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg mi-navbar"> 
+        <nav class="navbar navbar-expand-lg mi-navbar">
             <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="./photos/logo3.png" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="index.html">INICIO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/quienesSomos.html">QUIENES SOMOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/contacto.html">CONTACTO</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">PRODUCTOS</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./pages/productos/skates.html">SKATES</a></li>
-                            <li><a class="dropdown-item" href="./pages/productos/longboards.html">LONGBOARDS</a>
-                            </li>
-                            <li><a class="dropdown-item" href="./pages/productos/accesorios.html">ACCESORIOS</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+                <a class="navbar-brand" href="#">
+                    <img src="./photos/logo3.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/quienesSomos.html">QUIENES SOMOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">CONTACTO</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">PRODUCTOS</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./pages/productos/skates.html">SKATES</a></li>
+                                <li><a class="dropdown-item" href="./pages/productos/longboards.html">LONGBOARDS</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./pages/productos/accesorios.html">ACCESORIOS</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
 
     <main class="layout-index">
-    <h1>BOARDLINE</h1>
-    <br>
-    <h2>Skate your line</h2>
-    <br>
-    <p>¡Bienvenido a BOARDLINE! Tu tienda de confianza para todo lo relacionado con el skate y longboard.</p>
-
-    <!-- Imagen principal -->
-    <section>
-        <img src="./photos/PORTADA-min.jpg" alt="Skateboards and longboards" class="portada-img">
-    </section>
-    <br>
-    <!-- Contenedor de los 3 carruseles -->
-    <div class="container-index">
-        <!-- Carrusel 1 -->
-        <div id="carousel1" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./photos/f1.png" class="d-block w-100" alt="Promo 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="./photos/1-min.jpg" class="d-block w-100" alt="Promo 1 alternativa">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
+        <h1 class="animate__animated animate__fadeIn">BOARDLINE</h1>
+        <br>
+        <h2 class="animate__animated animate__slideInLeft">Skate your line</h2>
+        <br>
+        <div class="icon-container">
+            <!--
+category: Sport
+version: "2.21"
+unicode: "faca"
+-->
+            <svg class="patineta animate__animated animate__slideInLeft" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                stroke="#009688" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 4a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+                <path d="M5.5 15h3.5l.75 -1.5" />
+                <path d="M14 19v-5l-2.5 -3l2.5 -4" />
+                <path d="M8 8l3 -1h4l1 3h3" />
+                <path d="M17.5 21a.5 .5 0 1 0 0 -1a.5 .5 0 0 0 0 1z" fill="currentColor" />
+                <path d="M3 18c0 .552 .895 1 2 1h14c1.105 0 2 -.448 2 -1" />
+                <path d="M6.5 21a.5 .5 0 1 0 0 -1a.5 .5 0 0 0 0 1z" fill="currentColor" />
+            </svg>
+            
         </div>
 
-        <!-- Carrusel 2 -->
-        <div id="carousel2" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./photos/5-min.jpg" class="d-block w-100" alt="Promo 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="./photos/f5.png" class="d-block w-100" alt="Promo 2 alternativa">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
 
-        <!-- Carrusel 3 -->
-        <div id="carousel3" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./photos/2-min.jpg" class="d-block w-100" alt="Promo 3">
+        <p>¡Bienvenido a BOARDLINE! Tu tienda de confianza para todo lo relacionado con el skate y longboard.</p>
+
+        <!-- Imagen principal -->
+        <section>
+            <img src="./photos/PORTADA-min.jpg" alt="Skateboards and longboards" class="portada-img ">
+        </section>
+        <br>
+        <!-- Contenedor de los 3 carruseles -->
+        <div class="container-index">
+            <!-- Carrusel 1 -->
+            <div id="carousel1" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./photos/f1.png" class="d-block w-100" alt="Promo 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./photos/1-min.jpg" class="d-block w-100" alt="Promo 1 alternativa">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="./photos/f6.png" class="d-block w-100" alt="Promo 3 alternativa">
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
+
+            <!-- Carrusel 2 -->
+            <div id="carousel2" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./photos/5-min.jpg" class="d-block w-100" alt="Promo 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./photos/f5.png" class="d-block w-100" alt="Promo 2 alternativa">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+
+            <!-- Carrusel 3 -->
+            <div id="carousel3" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./photos/2-min.jpg" class="d-block w-100" alt="Promo 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./photos/f6.png" class="d-block w-100" alt="Promo 3 alternativa">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
     <footer class="footer">
         <br>
         <br>

@@ -1,0 +1,86 @@
+@use 'variables' as *;
+@use 'responsive' as *;
+// ---------------- CONTACTO ----------------
+
+
+.contacto {
+    padding: 20px;
+    margin: 20px;
+
+    h1 {
+        color: $color-titulos; // #6e706e
+        font-size: 8em;
+        font-family: $font-titulo; // Fredericka the Great
+        text-align: center;
+    }
+
+    h2 {
+        color: #1a3a22; // podés crear variable $color-contacto-titulo
+        font-size: 3em;
+        font-family: "Just Me Again Down Here", cursive;
+    }
+
+    p {
+        color: #817e76; // podés crear $color-contacto-p
+        font-size: 1.5em;
+        line-height: 1.5;
+        margin: 20px;
+        font-family: $font-navbar; // Crimson Pro
+    }
+
+    .container-formulario {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 60px;
+        padding-bottom: 20px;
+    }
+
+    .contact-form {
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 400px;
+
+            input,
+            textarea {
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid rgb(12, 87, 62);
+                font-size: 1rem;
+                width: 100%;
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
+
+            button {
+                padding: 12px;
+                border-radius: 5px;
+                border: none;
+                background-color: #104b37; 
+                color: white;
+                font-size: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #356607; 
+                }
+            }
+        }
+    }
+
+    .contact-img {
+        max-width: 400px;
+        max-height: 500px;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+}

@@ -1,17 +1,25 @@
 // Conectamos los otros archivos partials a mi scss principal
-//Principal solo tiene estilo de navbar - footer
-//Para no repetir el prefijo "variables." o "mixins." usamos "as *
+// Principal solo tiene estilo de navbar - footer
+// Para no repetir el prefijo "variables." o "mixins." usamos "as *
 
-//variables y mixins
-@use 'variables' as *; //Ahora podés usar la variable directamente sin el prefijo
-@use 'mixins' as *; //Ahora podés usar el mixin directamente sin el prefijo
+//variables
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
 
 //pages
-@use 'index' as *;
+@use './partials/index' as *;
+@use './partials/productos' as *;
+@use './partials/quienesSomos' as *;
+@use './partials/contacto' as *;
+
+//responsive
+@use './partials/responsive' as *;
 
 //--------------------NAVBAR--------------------
 .mi-navbar {
-    background-color: $color-navbar;
+background: #c1e6d8;
+background: radial-gradient(circle, rgba(193, 230, 216, 1) 0%, rgba(101, 143, 150, 1) 35%, rgba(78, 122, 119, 1) 65%, rgba(224, 244, 255, 1) 76%, rgba(173, 230, 126, 1) 88%, rgba(36, 71, 58, 1) 100%);
     --bs-navbar-color: $color-navbar-text;
     --bs-navbar-hover-color: $color-navbar-hover-links;
     --bs-navbar-padding-x: 2rem;
@@ -23,6 +31,7 @@
         font-size: 1.5rem;
         font-weight: 500;
         color: $color-navbar-text;
+
 
         //Estilos de losliks al pasar el mouse o hacer focus(hacer click
         //& ---> coloca el selector padre (.nav-link)
@@ -73,7 +82,8 @@
 
 //--------------------FOOTER--------------------
 footer {
-    background-color: $color-footer-bg;
+    background: #2C4D55;
+background: radial-gradient(circle, rgba(44, 77, 85, 1) 0%, rgba(181, 255, 248, 1) 63%, rgba(157, 177, 167, 1) 73%, rgba(253, 255, 250, 1) 86%, rgba(138, 235, 206, 1) 100%);
     text-align: center;
 
     a {
@@ -94,3 +104,55 @@ footer {
         font-family: $font-footer-title;
     }
 }
+
+//--------------------GENERAL--------------------
+// ---------------- RESET GLOBAL ----------------
+// Eliminamos márgenes/paddings por defecto de los navegadores
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; // Hace que el padding y border no sumen al tamaño total
+}
+
+html {
+    font-size: 16px; // Base para los em/rem
+}
+
+// ---------------- TITULOS Y PARRAFOS GENERALES ----------------
+
+h1 {
+    color: $color-titulos; // Color del texto
+    font-size: 7em; // Tamaño de fuente grande
+    margin-top: 20px; // Espacio arriba
+    font-family: $font-titulo; // Fuente personalizada
+}
+
+/*-------------EDITAR TODOS LOS PÁRRAFOS-------------------*/
+p {
+    color: $color-texto; // Color del texto
+    font-size: 1.5em; // Tamaño de fuente
+    line-height: 1.5; // Espacio entre líneas
+    margin: 20px; // Margen alrededor del párrafo
+    font-family: $font-parrafo; // Fuente personalizada
+}
+
+//----------LOGO SKATE ANIMADO-----------
+.icon-container {
+    text-align: center;
+    /* centra el contenido dentro del div */
+    margin: 20px 0;
+    /* espacio arriba y abajo */
+}
+
+.icon-container h2 {
+    margin-bottom: 10px;
+    /* espacio entre el h2 y el icono */
+}
+
+.patineta {
+    display: inline-block;
+    /* asegura que se comporte como elemento centrable */
+    width: 64px;
+    height: 64px;
+}
+

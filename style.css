@@ -1,5 +1,428 @@
+@charset "UTF-8";
+.layout-index {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+.layout-index h1 {
+  color: #acbcc4;
+  font-size: 10em;
+  margin-top: 20px;
+  font-family: "Lacquer", system-ui;
+  text-align: center;
+}
+.layout-index h2 {
+  color: #2c3a55;
+  font-size: 3em;
+  font-family: "Just Me Again Down Here", cursive;
+  text-align: center;
+}
+.layout-index p {
+  color: #626056;
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin: 20px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.portada-img {
+  width: 80%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 10px auto 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container-index {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.container-index img {
+  width: 100%;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .layout-index h1 {
+    font-size: 3rem;
+  }
+  .layout-index h2 {
+    font-size: 2rem;
+  }
+  .layout-index p {
+    font-size: 1rem;
+    margin: 10px 10px;
+  }
+  .portada-img {
+    width: 95%;
+    height: auto;
+    max-height: 250px;
+  }
+  .container-index {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .container-index img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+  }
+  .layout-quienes-somos {
+    width: 100%;
+  }
+  .layout-quienes-somos h1 {
+    font-size: 4rem;
+  }
+  .grid-quienes {
+    display: grid;
+    margin: 10px auto;
+    padding: 20px 10px;
+    gap: px;
+    grid-template-columns: 1fr !important;
+    align-items: center;
+  }
+  .grid-quienes p {
+    font-size: 1.5rem !important;
+    margin: 10px;
+  }
+  .texto-quienes {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .texto-quienes p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .texto-quienes h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  .texto-quienes h3 {
+    font-size: 1.2rem;
+    margin: 8px 0;
+  }
+  .imagenes-quienes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .imagenes-quienes img {
+    width: 100%; /* que ocupe todo el ancho disponible */
+    max-width: 300px;
+    height: auto;
+    margin: 10px 0;
+  }
+  .contacto h1 {
+    font-size: 4rem !important;
+    text-align: center;
+  }
+  .contacto h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .contacto p {
+    font-size: 1rem;
+  }
+  .contacto .container-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
+  .contacto .contact-form form {
+    width: 90%;
+  }
+  .contacto input,
+  .contacto textarea,
+  .contacto button {
+    width: 100%;
+  }
+  .contacto .contact-img {
+    max-width: 90%;
+    height: auto;
+  }
+  .contacto iframe {
+    width: 100%;
+    height: 250px;
+  }
+  .layout-productos__main h1 {
+    font-size: 3rem !important;
+    text-align: center;
+  }
+  .carousel {
+    max-width: 100%;
+  }
+  .carousel-item {
+    max-height: 250px;
+  }
+  .carousel-item img {
+    height: 100%;
+    object-fit: contain;
+  }
+  .text-center {
+    margin: 1rem 0;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .text-center h5 {
+    font-size: 1.8rem;
+  }
+  .text-center p {
+    font-size: 1rem;
+  }
+  .btn-success {
+    width: 80%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  .linea-punteada {
+    width: 95%;
+  }
+  footer h4 {
+    font-size: 2rem;
+  }
+  footer p {
+    font-size: 1rem;
+  }
+  footer a {
+    font-size: 1.2rem;
+  }
+  footer .footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+  }
+  footer .footer-redes a i {
+    font-size: 1.8rem;
+  }
+  .mi-navbar .navbar-collapse {
+    display: flex !important;
+    justify-content: center;
+  }
+  .mi-navbar .nav-link:hover, .mi-navbar .nav-link:focus {
+    border-radius: 0;
+  }
+}
+.layout-productos {
+  background-color: white;
+}
+.layout-productos__main {
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.carousel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.carousel-item {
+  aspect-ratio: 16/9;
+  max-height: 400px;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.carousel-item img:hover {
+  transform: scale(1.05);
+  transition: transform 0.8s ease;
+}
+.carousel .carousel-control-prev-icon,
+.carousel .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.text-center {
+  background: #e0dcd2;
+  padding: 40px;
+  margin: 1rem auto;
+  border-radius: 2px;
+  color: #34352c;
+  font-family: "Times New Roman", Times, serif;
+  max-width: 800px;
+}
+.text-center p {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.text-center h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-success {
+  background: linear-gradient(45deg, #1c8078, #93ecec);
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-success:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.linea-punteada {
+  border: none;
+  border-top: 5px dotted #093d15;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.layout-quienes-somos {
+  margin: 20px;
+  padding: 0;
+}
+.layout-quienes-somos h1 {
+  text-align: center;
+  margin-top: 0;
+}
+.layout-quienes-somos .grid-quienes {
+  margin: 15px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+.layout-quienes-somos .texto-quienes {
+  text-align: center;
+}
+.layout-quienes-somos .texto-quienes p {
+  color: #817e76;
+  font-size: 2em;
+  line-height: 1.5;
+  margin: 20px;
+  font-family: "Crimson Pro", serif;
+}
+.layout-quienes-somos .texto-quienes h1 {
+  font-size: 4em;
+  font-family: "Just Me Again Down Here", cursive;
+  margin-bottom: 20px;
+}
+.layout-quienes-somos .texto-quienes h2 {
+  color: #5aa0a1;
+  font-size: 4em;
+  font-family: "Just Me Again Down Here", cursive;
+}
+.layout-quienes-somos .texto-quienes h3 {
+  color: #048280;
+  font-size: 2.5em;
+  font-family: "Fredericka the Great", serif;
+}
+.layout-quienes-somos .imagenes-quienes {
+  display: grid;
+  grid-auto-rows: 250px;
+  gap: 15px;
+  justify-items: center;
+  position: relative;
+  padding-bottom: 80px;
+}
+.layout-quienes-somos .imagenes-quienes img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.layout-quienes-somos .imagenes-quienes img:nth-child(2) {
+  margin-top: 30px;
+  margin-right: 150px;
+}
+.layout-quienes-somos .imagenes-quienes img:nth-child(3) {
+  margin-top: 60px;
+}
+
+.contacto {
+  padding: 20px;
+  margin: 20px;
+}
+.contacto h1 {
+  color: #6e706e;
+  font-size: 8em;
+  font-family: "Fredericka the Great", serif;
+  text-align: center;
+}
+.contacto h2 {
+  color: #1a3a22;
+  font-size: 3em;
+  font-family: "Just Me Again Down Here", cursive;
+}
+.contacto p {
+  color: #817e76;
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin: 20px;
+  font-family: "Crimson Pro", serif;
+}
+.contacto .container-formulario {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding-bottom: 20px;
+}
+.contacto .contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+.contacto .contact-form form input,
+.contacto .contact-form form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(12, 87, 62);
+  font-size: 1rem;
+  width: 100%;
+}
+.contacto .contact-form form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.contacto .contact-form form button {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #104b37;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.contacto .contact-form form button:hover {
+  background-color: #356607;
+}
+.contacto .contact-img {
+  max-width: 400px;
+  max-height: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
 .mi-navbar {
-  background-color: #848274;
+  background: #c1e6d8;
+  background: radial-gradient(circle, rgb(193, 230, 216) 0%, rgb(101, 143, 150) 35%, rgb(78, 122, 119) 65%, rgb(224, 244, 255) 76%, rgb(173, 230, 126) 88%, rgb(36, 71, 58) 100%);
   --bs-navbar-color: $color-navbar-text;
   --bs-navbar-hover-color: $color-navbar-hover-links;
   --bs-navbar-padding-x: 2rem;
@@ -9,7 +432,7 @@
   font-family: "Crimson Pro", serif;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #3d3814;
+  color: #ecebde;
 }
 .mi-navbar .nav-link:hover, .mi-navbar .nav-link:focus {
   background-color: #929781;
@@ -27,7 +450,7 @@
 }
 .mi-navbar .dropdown-menu .dropdown-item:hover {
   background-color: #c6c4b4;
-  color: #3d3814;
+  color: #ecebde;
 }
 .mi-navbar .navbar-toggler {
   border-color: #5e561e;
@@ -43,23 +466,69 @@
 }
 
 footer {
-  background-color: #ccbcaa;
+  background: #2C4D55;
+  background: radial-gradient(circle, rgb(44, 77, 85) 0%, rgb(181, 255, 248) 63%, rgb(157, 177, 167) 73%, rgb(253, 255, 250) 86%, rgb(138, 235, 206) 100%);
   text-align: center;
 }
 footer a {
-  color: #544c2c;
+  color: #cdf5ff;
   font-size: 1.5em;
   text-decoration: none;
 }
 footer p {
-  color: #9c8065;
+  color: #f5f5f5;
   font-size: 1.2em;
   font-family: "Libre Bodoni", serif;
 }
 footer h4 {
-  color: #ad8559;
+  color: #bccccb;
   font-size: 3em;
   font-family: "Lacquer", system-ui;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  color: #6e706e;
+  font-size: 7em;
+  margin-top: 20px;
+  font-family: "Fredericka the Great", serif;
+}
+
+/*-------------EDITAR TODOS LOS PÁRRAFOS-------------------*/
+p {
+  color: #626056;
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin: 20px;
+  font-family: "Noto Sans Mono", monospace;
+}
+
+.icon-container {
+  text-align: center;
+  /* centra el contenido dentro del div */
+  margin: 20px 0;
+  /* espacio arriba y abajo */
+}
+
+.icon-container h2 {
+  margin-bottom: 10px;
+  /* espacio entre el h2 y el icono */
+}
+
+.patineta {
+  display: inline-block;
+  /* asegura que se comporte como elemento centrable */
+  width: 64px;
+  height: 64px;
 }
 
 /*# sourceMappingURL=style.css.map */
