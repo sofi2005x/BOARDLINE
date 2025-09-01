@@ -1,4 +1,5 @@
 /*Reseteamos el CSS para que no haya conflictos entre navegadores*/
+/*Lo aplica a todos los selectores*/
 * {
   margin: 0;
   padding: 0;
@@ -115,78 +116,6 @@ p {
   display: block;
 }
 
-/*------------NAVBAR (Bootstrap y estilos propios) ------------------*/
-
-.mi-navbar {
-  background-color: #848274;
-  /* el fondo se estira todo el ancho */
-  --bs-navbar-color: #3d3814;
-  --bs-navbar-hover-color: #ffe6e6;
-  --bs-navbar-padding-x: 2rem;
-  --bs-navbar-padding-y: 1rem;
-}
-
-/*Estilos de letras de la navbar*/
-.mi-navbar .nav-link {
-  font-family: "Crimson Pro", serif;
-  font-size: 1.5rem;
-  /* Tamaño de la letra */
-  font-weight: 500;
-  /* Grosor de la letra */
-}
-
-/*Estilos de la navbar al pasar el mouse*/
-.mi-navbar .nav-link:hover,
-/*Links del navbar dentro de la clase mi-navbar*/
-.mi-navbar .nav-link:focus {
-  background-color: #cec0b0;
-  /* Color de fondo al pasar el mouse */
-  border-radius: 2rem;
-  /* Bordes redondeados */
-}
-
-/*DROPDOWN*/
-.mi-navbar .dropdown-menu {
-  background-color: #21373a;
-  /* Color de fondo del dropdown */
-}
-
-.mi-navbar .dropdown-item {
-  font-family: "Crimson Pro", serif;
-  font-size: 1.5rem;
-  /* Tamaño de la letra */
-  font-weight: 500;
-  /* Grosor de la letra */
-  color: #f0dcc4;
-  /* Color del texto */
-}
-
-.dropdown-menu .dropdown-item:hover {
-  background-color: #c6c4b4;
-  /* fondo al pasar el mouse de los dropdowns */
-  color: #3d3814;
-  /* texto al pasar el mouse */
-}
-
-/*Estilos del boton de la navbar*/
-.mi-navbar .navbar-toggler {
-  border-color: #3d3814;
-  border-radius: 0.5 rem;
-}
-
-/*-------------------------LOGO DE LA NAVBAR-------------------------*/
-.navbar-brand img {
-  width: 100px;
-  /* Ancho del logo */
-  height: auto;
-  /* Altura automática para mantener la proporción */
-  margin-right: 10px;
-  /* Espacio a la derecha del logo */
-  border-radius: 50%;
-  /* Bordes redondos ----- > Otra alternativa es usar en el html la clase de BS "rounded-circle"*/
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-  /* Sombra para dar profundidad */
-}
 
 /*--------------------QUIENES SOMOS----------------------------*/
 .layout-quienes-somos {
@@ -542,7 +471,7 @@ footer h4 {
 /*----------------MOBILE---------------------*/
 /* USAMOS MAX-WIDTH ---> un maximo de 768px aproximadamente */
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
 
   /*------------responsive index---------------------*/
   /* Ajuste de títulos y párrafos */
@@ -766,3 +695,5 @@ footer h4 {
     /* íconos más pequeños */
   }
 }
+/*----------------TABLET---------------------*/
+/* USAMOS MAX-WIDTH ---> un maximo de 800px aproximadamente */

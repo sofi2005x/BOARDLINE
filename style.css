@@ -1,0 +1,45 @@
+.mi-navbar {
+  background-color: #848274;
+  --bs-navbar-color: $color-navbar-text;
+  --bs-navbar-hover-color: $color-navbar-hover-links;
+  --bs-navbar-padding-x: 2rem;
+  --bs-navbar-padding-y: 1rem;
+}
+.mi-navbar .nav-link {
+  font-family: "Crimson Pro", serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3d3814;
+}
+.mi-navbar .nav-link:hover, .mi-navbar .nav-link:focus {
+  background-color: #929781;
+  color: #fbf9f4;
+  border-radius: 2rem;
+}
+.mi-navbar .dropdown-menu {
+  background-color: #e0dcd2;
+}
+.mi-navbar .dropdown-menu .dropdown-item {
+  font-family: "Crimson Pro", serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #929781;
+}
+.mi-navbar .dropdown-menu .dropdown-item:hover {
+  background-color: #c6c4b4;
+  color: #3d3814;
+}
+.mi-navbar .navbar-toggler {
+  border-color: #5e561e;
+  border-radius: 0.5rem;
+}
+
+.navbar-brand img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/*# sourceMappingURL=style.css.map */

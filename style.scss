@@ -1,0 +1,73 @@
+// Conectamos los otros archivos partials a mi scss principal
+//Principal solo tiene estilo de navbar - footer
+//Para no repetir el prefijo "variables." o "mixins." usamos "as *
+
+//variables y mixins
+@use 'variables' as *; //Ahora podés usar la variable directamente sin el prefijo
+@use 'mixins' as *; //Ahora podés usar el mixin directamente sin el prefijo
+
+//pages
+@use 'index' as *;
+
+//--------------------NAVBAR--------------------
+.mi-navbar {
+    background-color: $color-navbar;
+    --bs-navbar-color: $color-navbar-text;
+    --bs-navbar-hover-color: $color-navbar-hover-links;
+    --bs-navbar-padding-x: 2rem;
+    --bs-navbar-padding-y: 1rem;
+
+    //Links del navbar
+    .nav-link {
+        font-family: $font-navbar;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $color-navbar-text;
+        //Estilos de losliks al pasar el mouse o hacer focus(hacer click
+        //& ---> coloca el selector padre (.nav-link)
+        &:hover,
+        &:focus {
+            background-color:$color-navbar-hover-links ;
+            color: $color-navbar-hover; // color del texto al pasar el mouse
+            border-radius: 2rem; //bordes redondeados
+        }
+    }
+
+
+    //Dropdown *desplegable
+    .dropdown-menu {
+        background-color: $color-dropdown-bg;
+
+        .dropdown-item {
+            font-family: $font-navbar;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $color-navbar-hover-links; // color normal del texto
+
+            //& ---> coloca el selector padre (.dropdown-item)
+            &:hover {
+                background-color: $color-dropdown-hover-bg;
+                color:$color-navbar-text ; // color del texto al pasar el mouse
+            }
+        }
+    }
+
+    // Botón toggle (hamburguesa)
+    .navbar-toggler {
+        border-color: $color-navbar-toggler-border;
+        border-radius: 0.5rem;
+    }
+}
+
+// Logo de la navbar (AJUSTES ADICIONALES , VAN POR FUERA DEL NAVBAR)
+.navbar-brand {
+    img {
+        width: 100px;
+        height: auto;
+        margin-right: 10px;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    }
+}
+
+//--------------------FOOTER--------------------
