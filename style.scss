@@ -23,11 +23,12 @@
         font-size: 1.5rem;
         font-weight: 500;
         color: $color-navbar-text;
+
         //Estilos de losliks al pasar el mouse o hacer focus(hacer click
         //& ---> coloca el selector padre (.nav-link)
         &:hover,
         &:focus {
-            background-color:$color-navbar-hover-links ;
+            background-color: $color-navbar-hover-links ;
             color: $color-navbar-hover; // color del texto al pasar el mouse
             border-radius: 2rem; //bordes redondeados
         }
@@ -47,7 +48,7 @@
             //& ---> coloca el selector padre (.dropdown-item)
             &:hover {
                 background-color: $color-dropdown-hover-bg;
-                color:$color-navbar-text ; // color del texto al pasar el mouse
+                color: $color-navbar-text ; // color del texto al pasar el mouse
             }
         }
     }
@@ -71,3 +72,25 @@
 }
 
 //--------------------FOOTER--------------------
+footer {
+    background-color: $color-footer-bg;
+    text-align: center;
+
+    a {
+        color: $color-footer-link;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+
+    p {
+        color: $color-footer-text;
+        font-size: 1.2em;
+        font-family: $font-footer-text;
+    }
+
+    h4 {
+        color: $color-footer-title;
+        font-size: 3em;
+        font-family: $font-footer-title;
+    }
+}

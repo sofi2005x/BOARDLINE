@@ -2,7 +2,13 @@
 // Colores generales
 $color-texto: #626056;              // Color de los párrafos
 $color-titulos: #6e706e;            // Color de los títulos
-$color-footer: #ccbcaa;             // Fondo del footer
+
+//Colores footer
+$color-footer-bg: #ccbcaa;        // fondo del footer
+$color-footer-link: #544c2c;      // color de los enlaces
+$color-footer-text: #9c8065;      // color del texto normal
+$color-footer-title: #ad8559;     // color de los títulos
+
 
 // Navbar
 $color-navbar: #848274;              // Background del navbar
@@ -21,3 +27,7 @@ $color-navbar-toggler-border: #5e561e; // Borde del botón hamburguesa
 $font-titulo: "Fredericka the Great", serif;
 $font-parrafo: "Noto Sans Mono", monospace;
 $font-navbar: "Crimson Pro", serif;
+$font-footer-text: "Libre Bodoni", serif;
+$font-footer-title: "Lacquer", system-ui;
+
+

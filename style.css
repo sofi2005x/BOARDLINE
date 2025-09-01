@@ -42,4 +42,24 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
+footer {
+  background-color: #ccbcaa;
+  text-align: center;
+}
+footer a {
+  color: #544c2c;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+footer p {
+  color: #9c8065;
+  font-size: 1.2em;
+  font-family: "Libre Bodoni", serif;
+}
+footer h4 {
+  color: #ad8559;
+  font-size: 3em;
+  font-family: "Lacquer", system-ui;
+}
+
 /*# sourceMappingURL=style.css.map */
