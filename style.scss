@@ -18,91 +18,127 @@
 
 //--------------------NAVBAR--------------------
 .mi-navbar {
-background: #c1e6d8;
-background: radial-gradient(circle, rgba(193, 230, 216, 1) 0%, rgba(101, 143, 150, 1) 35%, rgba(78, 122, 119, 1) 65%, rgba(224, 244, 255, 1) 76%, rgba(173, 230, 126, 1) 88%, rgba(36, 71, 58, 1) 100%);
-    --bs-navbar-color: $color-navbar-text;
-    --bs-navbar-hover-color: $color-navbar-hover-links;
-    --bs-navbar-padding-x: 2rem;
-    --bs-navbar-padding-y: 1rem;
+    background-image: url("photos/PORTADA-min.jpg");
+    background-size: cover;
+    background-position: left 45%;
+    font-family: $font-navbar;
+    font-size: 1.5rem;
+    font-weight: 500;
+    --bs-navbar-color: #{$color-navbar-text}; // color normal de los links
+    --bs-navbar-hover-color: #{$color-navbar-hover}; // color del texto al pasar el mouse
 
-    //Links del navbar
+    //Estilos de losliks al pasar el mouse o hacer focus(hacer click
+    //& ---> coloca el selector padre (.nav-link)
     .nav-link {
-        font-family: $font-navbar;
-        font-size: 1.5rem;
-        font-weight: 500;
-        color: $color-navbar-text;
+        border-radius: 2rem; // siempre redondeado si lo ponemos por fuera(dentro del focus solo se redondea al hacer focus)
 
-
-        //Estilos de losliks al pasar el mouse o hacer focus(hacer click
-        //& ---> coloca el selector padre (.nav-link)
         &:hover,
         &:focus {
             background-color: $color-navbar-hover-links ;
             color: $color-navbar-hover; // color del texto al pasar el mouse
-            border-radius: 2rem; //bordes redondeados
         }
     }
 
+}
 
-    //Dropdown *desplegable
-    .dropdown-menu {
-        background-color: $color-dropdown-bg;
 
-        .dropdown-item {
-            font-family: $font-navbar;
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: $color-navbar-hover-links; // color normal del texto
+//Dropdown *desplegable
+.dropdown-menu {
+    background-color: $color-dropdown-bg;
 
-            //& ---> coloca el selector padre (.dropdown-item)
-            &:hover {
-                background-color: $color-dropdown-hover-bg;
-                color: $color-navbar-text ; // color del texto al pasar el mouse
-            }
+    .dropdown-item {
+        font-family: $font-navbar;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $color-navbar-hover-links; // color normal del texto
+
+        //& ---> coloca el selector padre (.dropdown-item)
+        &:hover {
+            background-color: $color-dropdown-hover-bg;
+            color: $color-navbar-text ; // color del texto al pasar el mouse
         }
-    }
-
-    // Botón toggle (hamburguesa)
-    .navbar-toggler {
-        border-color: $color-navbar-toggler-border;
-        border-radius: 0.5rem;
     }
 }
 
-// Logo de la navbar (AJUSTES ADICIONALES , VAN POR FUERA DEL NAVBAR)
+// Botón toggle (hamburguesa)
+.navbar-toggler {
+    border-color: $color-navbar-toggler-border;
+    border-radius: 0.5rem;
+}
+
+// Logo de la navbar
 .navbar-brand {
     img {
         width: 100px;
+        background: none;
         height: auto;
         margin-right: 10px;
         border-radius: 50%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        box-shadow: 3px 6px 8px rgba(2, 2, 2, 0.741);
+        -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 99%, rgba(0, 0, 0, 0) 100%);
+        mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 99%, rgba(0, 0, 0, 0) 100%);
     }
 }
 
 //--------------------FOOTER--------------------
 footer {
-    background: #2C4D55;
-background: radial-gradient(circle, rgba(44, 77, 85, 1) 0%, rgba(181, 255, 248, 1) 63%, rgba(157, 177, 167, 1) 73%, rgba(253, 255, 250, 1) 86%, rgba(138, 235, 206, 1) 100%);
-    text-align: center;
+    .footer-container {
+        display: flex;
+        flex-direction: column; // para que los elementos estén uno debajo del otro
+        align-items: center; // centra horizontalmente
+        padding: 10px;
+        text-align: center;
+        background: -webkit-linear-gradient(90deg, #000000, #1e0d21, #30008a, #210240);
+        background: linear-gradient(90deg, #000000, #1e0d21, #30008a, #210240);
 
-    a {
+
+        .footer-logo {
+            margin-top: 20px;
+            width: 80px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.716);
+            -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 99%, rgba(0, 0, 0, 0) 100%);
+            mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 99%, rgba(0, 0, 0, 0.873) 100%);
+        }
+
+        a {
+            color: $color-footer-link;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        p {
+            color: $color-footer-text;
+            font-size: 1.2em;
+            font-family: $font-footer-text;
+        }
+
+        h4 {
+            color: $color-footer-title;
+            font-size: 1.5em;
+            font-family: $font-footer-title;
+        }
+
+        h2 {
+            color: $color-footer-title;
+            font-size: 1.5em;
+            font-family: $font-footer-title;
+            margin-bottom: 10px;
+        }
+    }
+
+    .footer-redes a {
         color: $color-footer-link;
-        font-size: 1.5em;
-        text-decoration: none;
-    }
+        font-size: 2rem;
+        margin: 0 10px;
 
-    p {
-        color: $color-footer-text;
-        font-size: 1.2em;
-        font-family: $font-footer-text;
+        &:hover {
+            color:#ebb0ff;
+        }
     }
-
-    h4 {
-        color: $color-footer-title;
-        font-size: 3em;
-        font-family: $font-footer-title;
-    }
+    
 }
 
 //--------------------GENERAL--------------------
@@ -155,4 +191,3 @@ p {
     width: 64px;
     height: 64px;
 }
-

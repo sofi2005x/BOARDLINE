@@ -42,16 +42,16 @@
 
 // ---------------- TEXTO CENTRADO ----------------
 .text-center {
-    background: #e0dcd2;
+    background: #7e1452;
     padding: 40px;
     margin: 1rem auto;
     border-radius: 2px;
-    color: #34352c;
+    color: #ffffff;
     font-family: "Times New Roman", Times, serif;
     max-width: 800px;
 
     p {
-        color: #333;
+        color: #d6caca;
         font-size: 1rem;
         line-height: 1.5;
         font-family: Georgia, "Times New Roman", Times, serif;
@@ -65,13 +65,13 @@
 
 // ---------------- BOTONES ----------------
 .btn-success {
-    @include btn-compra(linear-gradient(45deg, #1c8078, #93ecec));
+    @include btn-compra(linear-gradient(45deg, #801c35, #d393ec));
 }
 
 // ---------------- LINEA DECORATIVA ----------------
 .linea-punteada {
     border: none;
-    border-top: 5px dotted #093d15;
+    border-top: 5px dotted #1c5a72;
     width: 80%;
     margin: 20px auto;
 }

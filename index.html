@@ -10,9 +10,6 @@
     <!-- Enlace para Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <!-- Ruta relativa para el CSS -->
-    <link rel="stylesheet" href="style.css">
-
     <!-- Enlace a Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -24,6 +21,8 @@
         rel="stylesheet">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Ruta relativa para el CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -31,7 +30,7 @@
         <nav class="navbar navbar-expand-lg mi-navbar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="./photos/logo3.png" alt="Logo">
+                    <img src="./photos/logox.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -39,7 +38,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
                             <a class="nav-link " aria-current="page" href="index.html">INICIO</a>
                         </li>
@@ -67,18 +66,18 @@
     </header>
 
     <main class="layout-index">
+        </div>
         <h1 class="animate__animated animate__fadeIn">BOARDLINE</h1>
-        <br>
         <h2 class="animate__animated animate__slideInLeft">Skate your line</h2>
-        <br>
         <div class="icon-container">
             <!--
 category: Sport
 version: "2.21"
 unicode: "faca"
 -->
-            <svg class="patineta animate__animated animate__slideInLeft" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
-                stroke="#009688" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="patineta animate__animated animate__slideInLeft" xmlns="http://www.w3.org/2000/svg" width="32"
+                height="32" viewBox="0 0 24 24" fill="none" stroke="#009688" stroke-width="1" stroke-linecap="round"
+                stroke-linejoin="round">
                 <path d="M16 4a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
                 <path d="M5.5 15h3.5l.75 -1.5" />
                 <path d="M14 19v-5l-2.5 -3l2.5 -4" />
@@ -87,17 +86,13 @@ unicode: "faca"
                 <path d="M3 18c0 .552 .895 1 2 1h14c1.105 0 2 -.448 2 -1" />
                 <path d="M6.5 21a.5 .5 0 1 0 0 -1a.5 .5 0 0 0 0 1z" fill="currentColor" />
             </svg>
-            
         </div>
-
-
         <p>¡Bienvenido a BOARDLINE! Tu tienda de confianza para todo lo relacionado con el skate y longboard.</p>
 
         <!-- Imagen principal -->
         <section>
-            <img src="./photos/PORTADA-min.jpg" alt="Skateboards and longboards" class="portada-img ">
+            <img src="./photos/inicio1.png" alt="Skateboards and longboards" class="portada-img ">
         </section>
-        <br>
         <!-- Contenedor de los 3 carruseles -->
         <div class="container-index">
             <!-- Carrusel 1 -->
@@ -161,23 +156,19 @@ unicode: "faca"
             </div>
         </div>
     </main>
-    <footer class="footer">
-        <br>
-        <br>
-        <h4>BOARDLINE</h4>
-        <p>Skate para todos</p>
-        <p>Seguinos!</p>
-        <div class="footer-redes">
-            <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    <footer>
+        <div class="footer-container">
+            <img src="./photos/logox.png" alt="Logo" class="footer-logo">
+            <h2>Skate para todos</h2>
+            <p>Nuestras redes</p>
+            <div class="footer-redes">
+                <a href="https://instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                    <a href="mailto:tucorreo@ejemplo.com">
+                        <i class="fa-solid fa-envelope"></i>
+            </div>
+            <p>© 2025 <s>BOARDLINE</s> </p>
         </div>
-        <br>
-        <br>
-        <p>© 2025 <s>BOARDLINE</s> Todos los derechos reservados</p>
-        <a href="#">Política de privacidad</a>
-        <br>
-        <br>
     </footer>
     <!-- Enlace para Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
