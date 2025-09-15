@@ -63,7 +63,11 @@
 // Botón toggle (hamburguesa)
 .navbar-toggler {
     border-color: $color-navbar-toggler-border;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
+    width: 60px; // ancho del botón
+    height: 60px; // alto del botón
+    border-width: 2px; // grosor del borde
+
 }
 
 // Logo de la navbar
@@ -80,6 +84,12 @@
     }
 }
 
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(159, 118, 213, 0.362); // color y difuminado
+}
+
+
 //--------------------FOOTER--------------------
 footer {
     .footer-container {
@@ -90,7 +100,7 @@ footer {
         text-align: center;
         background: -webkit-linear-gradient(90deg, #000000, #1e0d21, #30008a, #210240);
         background: linear-gradient(90deg, #000000, #1e0d21, #30008a, #210240);
-
+        gap: 10px;
 
         .footer-logo {
             margin-top: 20px;
@@ -105,27 +115,26 @@ footer {
 
         a {
             color: $color-footer-link;
-            font-size: 1.5em;
+            font-size: 1.8em;
             text-decoration: none;
         }
 
-        p {
-            color: $color-footer-text;
-            font-size: 1.2em;
-            font-family: $font-footer-text;
+        h2,
+        h3 {
+            color: $color-footer-text !important;
+            font-size: 1.3rem;
+            font-family: $font-navbar;
+            margin: 8px 0;
         }
+        h3{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+
 
         h4 {
             color: $color-footer-title;
-            font-size: 1.5em;
-            font-family: $font-footer-title;
-        }
-
-        h2 {
-            color: $color-footer-title;
-            font-size: 1.5em;
-            font-family: $font-footer-title;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            font-family: $font-titulo;
+            margin-bottom: 20px;
         }
     }
 
@@ -135,10 +144,10 @@ footer {
         margin: 0 10px;
 
         &:hover {
-            color:#ebb0ff;
+            color: #ebb0ff;
         }
     }
-    
+
 }
 
 //--------------------GENERAL--------------------

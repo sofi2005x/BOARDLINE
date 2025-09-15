@@ -17,11 +17,11 @@
   text-align: center;
 }
 .layout-index p {
-  color: #060000;
+  color: #000000;
   font-size: 1.5em;
   line-height: 1.5;
   margin: 20px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Fredericka the Great", serif;
   text-align: center;
 }
 
@@ -72,68 +72,61 @@
     max-height: 250px;
     object-fit: cover;
   }
-  .layout-quienes-somos {
-    width: 100%;
-  }
   .layout-quienes-somos h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .grid-quienes {
     display: grid;
-    margin: 10px auto;
-    padding: 20px 10px;
-    gap: px;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 100%;
     grid-template-columns: 1fr !important;
     align-items: center;
+    justify-items: center;
+    justify-content: center;
+    /* centra los hijos horizontalmente */
   }
   .grid-quienes p {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
     margin: 10px;
+    text-align: center;
   }
   .texto-quienes {
-    max-width: 100%;
     margin: 0 auto;
-    padding: 0 10px;
-  }
-  .texto-quienes p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
   }
   .texto-quienes h2 {
-    font-size: 1.5rem;
+    font-size: 3rem !important;
     margin: 10px 0;
   }
   .texto-quienes h3 {
-    font-size: 1.2rem;
+    font-size: 1.8rem !important;
     margin: 8px 0;
   }
-  .imagenes-quienes {
+  .imagen-quienes {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     padding: 0 10px;
   }
-  .imagenes-quienes img {
-    width: 100%; /* que ocupe todo el ancho disponible */
+  .imagen-quienes img {
+    width: 100%;
+    /* que ocupe todo el ancho disponible */
     max-width: 300px;
     height: auto;
     margin: 10px 0;
   }
   .contacto h1 {
-    font-size: 4rem !important;
+    font-size: 3rem !important;
     text-align: center;
   }
   .contacto h2 {
-    font-size: 2rem;
+    font-size: 2rem !important;
     text-align: center;
     margin: 10px 0;
   }
   .contacto p {
-    font-size: 1rem;
+    font-size: 1.2rem !important;
   }
   .contacto .container-formulario {
     display: flex;
@@ -159,7 +152,7 @@
     height: 250px;
   }
   .layout-productos__main h1 {
-    font-size: 3rem !important;
+    font-size: 2.5rem !important;
     text-align: center;
   }
   .carousel {
@@ -181,7 +174,7 @@
     font-size: 1.8rem;
   }
   .text-center p {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
   .btn-success {
     width: 80%;
@@ -191,13 +184,15 @@
   .linea-punteada {
     width: 95%;
   }
-  footer h4 {
-    font-size: 2rem;
+  footer .footer-container {
+    padding: 5px;
   }
-  footer p {
-    font-size: 1rem;
+  footer .footer-container h2,
+  footer .footer-container h3,
+  footer .footer-container h4 {
+    font-size: 1rem !important;
   }
-  footer a {
+  footer .footer-container a {
     font-size: 1.2rem;
   }
   footer .footer-redes {
@@ -210,11 +205,91 @@
     font-size: 1.8rem;
   }
   .mi-navbar .navbar-collapse {
-    display: flex !important;
     justify-content: center;
   }
+  .mi-navbar .nav-link {
+    border-radius: 2rem !important;
+    padding: 0.4rem 1rem;
+  }
   .mi-navbar .nav-link:hover, .mi-navbar .nav-link:focus {
-    border-radius: 0;
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+  }
+  .carousel .carousel-control-prev-icon,
+  .carousel .carousel-control-next-icon {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 20%;
+    background-color: rgba(95, 52, 154, 0.68);
+    transform: scale(1.2);
+    transition: transform 0.6s ease;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .container-index {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .container-index img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+  }
+  .contacto h2 {
+    font-size: 2rem !important;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .grid-quienes {
+    display: grid;
+    margin: 0 auto;
+    padding: 20px 10px;
+    max-width: 90%;
+    /* o 80%, según cómo lo quieras ver */
+    gap: px;
+    grid-template-columns: 1fr !important;
+    align-items: center;
+    justify-items: center;
+    /* centra los hijos horizontalmente */
+  }
+  .grid-quienes p {
+    font-size: 1.5rem !important;
+    margin: 10px;
+  }
+  .texto-quienes {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .texto-quienes p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .texto-quienes h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  .texto-quienes h3 {
+    font-size: 1.2rem;
+    margin: 8px 0;
+  }
+  .imagen-quienes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .imagen-quienes img {
+    width: 100%;
+    /* que ocupe todo el ancho disponible */
+    max-width: 300px;
+    height: auto;
+    margin: 10px 0;
   }
 }
 .layout-productos {
@@ -245,7 +320,12 @@
 }
 .carousel .carousel-control-prev-icon,
 .carousel .carousel-control-next-icon {
-  filter: invert(1);
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
+  background-color: rgba(95, 52, 154, 0.68);
+  transform: scale(1.2);
+  transition: transform 0.6s ease;
 }
 
 .text-center {
@@ -280,7 +360,7 @@
 
 .linea-punteada {
   border: none;
-  border-top: 5px dotted #1c5a72;
+  border-top: 5px dotted #581349;
   width: 80%;
   margin: 20px auto;
 }
@@ -294,12 +374,12 @@
   margin-top: 0;
 }
 .layout-quienes-somos .grid-quienes {
-  margin: 15px;
-  padding: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  align-items: start;
+  align-items: center;
+  margin: 15px;
+  padding: 15px;
 }
 .layout-quienes-somos .texto-quienes {
   text-align: center;
@@ -326,28 +406,18 @@
   font-size: 2.5em;
   font-family: "Fredericka the Great", serif;
 }
-.layout-quienes-somos .imagenes-quienes {
-  display: grid;
-  grid-auto-rows: 250px;
-  gap: 15px;
-  justify-items: center;
-  position: relative;
-  padding-bottom: 80px;
+.layout-quienes-somos .imagen-quienes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.layout-quienes-somos .imagenes-quienes img {
-  width: auto;
-  height: 100%;
+.layout-quienes-somos .imagen-quienes img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   object-fit: cover;
-  object-position: center;
   border-radius: 8px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-.layout-quienes-somos .imagenes-quienes img:nth-child(2) {
-  margin-top: 30px;
-  margin-right: 150px;
-}
-.layout-quienes-somos .imagenes-quienes img:nth-child(3) {
-  margin-top: 60px;
 }
 
 .contacto {
@@ -453,8 +523,11 @@
 }
 
 .navbar-toggler {
-  border-color: #3d0e47;
-  border-radius: 0.5rem;
+  border-color: #52235e;
+  border-radius: 2rem;
+  width: 60px;
+  height: 60px;
+  border-width: 2px;
 }
 
 .navbar-brand img {
@@ -468,6 +541,11 @@
   mask-image: radial-gradient(circle, rgb(0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
 }
 
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(159, 118, 213, 0.362);
+}
+
 footer .footer-container {
   display: flex;
   flex-direction: column;
@@ -476,6 +554,7 @@ footer .footer-container {
   text-align: center;
   background: -webkit-linear-gradient(90deg, #000000, #1e0d21, #30008a, #210240);
   background: linear-gradient(90deg, #000000, #1e0d21, #30008a, #210240);
+  gap: 10px;
 }
 footer .footer-container .footer-logo {
   margin-top: 20px;
@@ -488,28 +567,28 @@ footer .footer-container .footer-logo {
   mask-image: radial-gradient(circle, rgb(0, 0, 0) 99%, rgba(0, 0, 0, 0.873) 100%);
 }
 footer .footer-container a {
-  color: #601065;
-  font-size: 1.5em;
+  color: #7148bc;
+  font-size: 1.8em;
   text-decoration: none;
 }
-footer .footer-container p {
-  color: #8472ca;
-  font-size: 1.2em;
-  font-family: "Libre Bodoni", serif;
+footer .footer-container h2,
+footer .footer-container h3 {
+  color: #dab2e7 !important;
+  font-size: 1.3rem;
+  font-family: "Crimson Pro", serif;
+  margin: 8px 0;
+}
+footer .footer-container h3 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 footer .footer-container h4 {
-  color: rgba(170, 0, 249, 0.7058823529);
-  font-size: 1.5em;
-  font-family: "Lacquer", system-ui;
-}
-footer .footer-container h2 {
-  color: rgba(170, 0, 249, 0.7058823529);
-  font-size: 1.5em;
-  font-family: "Lacquer", system-ui;
-  margin-bottom: 10px;
+  color: rgba(245, 69, 248, 0.7058823529);
+  font-size: 1.5rem;
+  font-family: "Fredericka the Great", serif;
+  margin-bottom: 20px;
 }
 footer .footer-redes a {
-  color: #601065;
+  color: #7148bc;
   font-size: 2rem;
   margin: 0 10px;
 }
@@ -536,7 +615,7 @@ h1 {
 
 /*-------------EDITAR TODOS LOS PÁRRAFOS-------------------*/
 p {
-  color: #060000;
+  color: #000000;
   font-size: 1.5em;
   line-height: 1.5;
   margin: 20px;

@@ -38,30 +38,269 @@
 
     //---------------------- Quienes Somos ------------------------------------
     .layout-quienes-somos {
-        width: 100%;
-        h1 {font-size: 4rem;
-        }
-        }
-        .grid-quienes {
-            display: grid;
-            margin :10px auto;
-            padding:20px 10px;
-            gap: px;
-            grid-template-columns: 1fr!important;
-            align-items: center;
 
-            p {
-                font-size: 1.5rem!important;
-                margin: 10px;
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    .grid-quienes {
+        display: grid;
+        margin: 0 auto;
+        padding: 10px;
+        max-width: 100%;
+        grid-template-columns: 1fr !important;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        /* centra los hijos horizontalmente */
+
+
+        p {
+            font-size: 1.2rem !important;
+            margin: 10px;
+            text-align: center;
+        }
+    }
+
+    .texto-quienes {
+        margin: 0 auto;
+        
+
+
+        h2 {
+            font-size: 3rem !important;
+            margin: 10px 0;
+        }
+
+        h3 {
+            font-size: 1.8rem!important;
+            margin: 8px 0;
+        }
+    }
+
+
+    .imagen-quienes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 10px;
+
+        img {
+            width: 100%;
+            /* que ocupe todo el ancho disponible */
+            max-width: 300px;
+            height: auto;
+            margin: 10px 0;
+        }
+    }
+
+    //----------------------------- Contacto ---------------------------------
+    .contacto {
+        h1 {
+            font-size: 3rem !important;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem !important;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 1.2rem !important;
+        }
+
+        .container-formulario {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .contact-form form {
+            width: 90%;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+        }
+
+        .contact-img {
+            max-width: 90%;
+            height: auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 250px;
+        }
+    }
+
+    //------------------- Productos --------------------------------
+    .layout-productos__main {
+        h1 {
+            font-size: 2.5rem !important;
+            text-align: center;
+        }
+    }
+
+    .carousel {
+        max-width: 100%;
+    }
+
+    .carousel-item {
+        max-height: 250px;
+
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .text-center {
+        margin: 1rem 0;
+        padding: 20px;
+        border-radius: 5px;
+
+        h5 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1rem !important;
+        }
+    }
+
+    .btn-success {
+        width: 80%;
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .linea-punteada {
+        width: 95%;
+    }
+
+
+    //---------------------------- Footer --------------------------------
+    footer {
+        .footer-container {
+            padding: 5px;
+
+            h2,
+            h3,
+            h4 {
+                font-size: 1rem !important;
+            }
+
+            a {
+                font-size: 1.2rem;
             }
         }
-        .texto-quienes {
-        max-width: 100%;        
+
+
+
+
+        .footer-redes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 10px 0;
+
+            a i {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    //---------------------------- Navbar --------------------------------
+    .mi-navbar {
+        .navbar-collapse {
+            justify-content: center;
+        }
+
+        .nav-link {
+
+            border-radius: 2rem !important;
+            padding: 0.4rem 1rem;
+
+            &:hover,
+            &:focus {
+                border-radius: 10px;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    }
+    // ---------------- CARRUSEL ----------------
+.carousel {
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 20px!important; // ancho de la flecha
+        height: 20px!important; // alto de la flecha
+        border-radius: 20%; // opcional: circular
+        background-color: rgba(95, 52, 154, 0.68); // fondo semi-transparente
+        transform: scale(1.2);
+        transition: transform 0.6s ease;
+    }
+}
+
+}
+
+//media query tablet
+@media (min-width: 481px) and (max-width: 768px) {
+    .container-index {
+        grid-template-columns: 1fr;
+        gap: 15px;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: cover;
+        }
+    }
+
+    .contacto {
+        h2 {
+            font-size: 2rem !important;
+            text-align: center;
+            margin: 10px 0;
+        }
+    }
+
+    .grid-quienes {
+        display: grid;
+        margin: 0 auto;
+        padding: 20px 10px;
+        max-width: 90%;
+        /* o 80%, según cómo lo quieras ver */
+        gap: px;
+        grid-template-columns: 1fr !important;
+        align-items: center;
+        justify-items: center;
+        /* centra los hijos horizontalmente */
+
+
+        p {
+            font-size: 1.5rem !important;
+            margin: 10px;
+        }
+    }
+
+    .texto-quienes {
+        max-width: 100%;
         margin: 0 auto;
         padding: 0 10px;
 
         p {
-            font-size: 1rem;    
+            font-size: 1rem;
             line-height: 1.5;
             margin-bottom: 10px;
             word-wrap: break-word;
@@ -80,154 +319,20 @@
     }
 
 
-        .imagenes-quienes {
+    .imagen-quienes {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
-        width: 100%;            
+        width: 100%;
         padding: 0 10px;
-        
+
         img {
-            width: 100%;        /* que ocupe todo el ancho disponible */
-            max-width: 300px;   
+            width: 100%;
+            /* que ocupe todo el ancho disponible */
+            max-width: 300px;
             height: auto;
             margin: 10px 0;
         }
-        }
-
-        //----------------------------- Contacto ---------------------------------
-        .contacto {
-            h1 {
-                font-size: 4rem !important;
-                text-align: center;
-            }
-
-            h2 {
-                font-size: 2rem;
-                text-align: center;
-                margin: 10px 0;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .container-formulario {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-                padding: 10px;
-            }
-
-            .contact-form form {
-                width: 90%;
-            }
-
-            input,
-            textarea,
-            button {
-                width: 100%;
-            }
-
-            .contact-img {
-                max-width: 90%;
-                height: auto;
-            }
-
-            iframe {
-                width: 100%;
-                height: 250px;
-            }
-        }
-
-        //------------------- Productos --------------------------------
-        .layout-productos__main {
-            h1 {
-                font-size: 3rem !important;
-                text-align: center;
-            }
-        }
-        
-        .carousel {
-            max-width: 100%;
-        }
-
-        .carousel-item {
-            max-height: 250px;
-
-            img {
-                height: 100%;
-                object-fit: contain;
-            }
-        }
-
-        .text-center {
-            margin: 1rem 0;
-            padding: 20px;
-            border-radius: 5px;
-
-            h5 {
-                font-size: 1.8rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-        }
-
-        .btn-success {
-            width: 80%;
-            font-size: 0.9rem;
-            padding: 10px;
-        }
-
-        .linea-punteada {
-            width: 95%;
-        }
-
-
-        //---------------------------- Footer --------------------------------
-        footer {
-            h4 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            a {
-                font-size: 1.2rem;
-            }
-
-            .footer-redes {
-                display: flex;
-                justify-content: center;
-                gap: 15px;
-                margin: 10px 0;
-
-                a i {
-                    font-size: 1.8rem;
-                }
-            }
-        }
-
-        //---------------------------- Navbar --------------------------------
-        .mi-navbar {
-            .navbar-collapse {
-                display: flex !important;
-                justify-content: center;
-            }
-
-            .nav-link {
-
-                &:hover,
-                &:focus {
-                    border-radius: 0;
-                }
-            }
-        }
     }
 
-    
+}

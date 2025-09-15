@@ -36,7 +36,12 @@
 
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
-        filter: invert(1);
+        width: 30px; // ancho de la flecha
+        height: 30px; // alto de la flecha
+        border-radius: 20%; // opcional: circular
+        background-color: rgba(95, 52, 154, 0.68); // fondo semi-transparente
+        transform: scale(1.2);
+        transition: transform 0.6s ease;
     }
 }
 
@@ -71,7 +76,7 @@
 // ---------------- LINEA DECORATIVA ----------------
 .linea-punteada {
     border: none;
-    border-top: 5px dotted #1c5a72;
+    border-top: 5px dotted #581349;
     width: 80%;
     margin: 20px auto;
 }

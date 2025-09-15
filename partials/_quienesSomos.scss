@@ -2,7 +2,6 @@
 @use 'responsive' as *;
 // ---------------- QUIENES SOMOS ----------------
 
-
 .layout-quienes-somos {
     margin: 20px;
     padding: 0;
@@ -13,23 +12,23 @@
     }
 
     .grid-quienes {
+        display: grid;
+        grid-template-columns: 1fr 1fr; // texto | imagen
+        gap: 30px;
+        align-items: center; // centra verticalmente
         margin: 15px;
         padding: 15px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        align-items: start;
     }
 
     .texto-quienes {
-        text-align: center;
+        text-align: center; // mantiene los textos centrados
 
         p {
-            color: #817e76; 
+            color: #817e76;
             font-size: 2em;
             line-height: 1.5;
             margin: 20px;
-            font-family: $font-navbar; 
+            font-family: $font-navbar;
         }
 
         h1 {
@@ -47,34 +46,23 @@
         h3 {
             color: #c21571;
             font-size: 2.5em;
-            font-family: $font-titulo; // Fredericka the Great
+            font-family: $font-titulo;
         }
     }
 
-    .imagenes-quienes {
-        display: grid;
-        grid-auto-rows: 250px;
-        gap: 15px;
-        justify-items: center;
-        position: relative;
-        padding-bottom: 80px;
+    .imagen-quienes {
+        display: flex; // cambia a flex para centrar la imagen
+        justify-content: center;
+        align-items: center;
 
         img {
-            width: auto;
-            height: 100%;
+            width: 100%;      // ocupa toda la columna
+            max-width: 400px; // limita tamaño máximo
+            height: auto;     // mantiene proporción
             object-fit: cover;
-            object-position: center;
             border-radius: 8px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-
-            &:nth-child(2) {
-                margin-top: 30px;
-                margin-right: 150px;
-            }
-
-            &:nth-child(3) {
-                margin-top: 60px;
-            }
         }
     }
 }
+

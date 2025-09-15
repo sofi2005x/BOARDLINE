@@ -1,13 +1,13 @@
 // ---------------- VARIABLES PRINCIPALES ----------------
 // Colores generales
-$color-texto: #060000;              // Color de los párrafos
+$color-texto: #000000;              // Color de los párrafos
 $color-titulos: #361348;            // Color de los títulos
 
 //Colores footer
 
-$color-footer-link: #601065;      // color de los enlaces
-$color-footer-text: #8472ca;      // color del texto normal
-$color-footer-title: #aa00f9b4;     // color de los títulos
+$color-footer-link: #7148bc;      // color de los enlaces
+$color-footer-text: #dab2e7;      // color del texto normal
+$color-footer-title: #f545f8b4;     // color de los títulos
 
 
 // Navbar
@@ -20,7 +20,7 @@ $color-dropdown-bg: #a48cc5de;         // Fondo de la lista desplegable
 $color-dropdown-hover-bg: #fbfbffc3;   // Fondo al pasar el mouse en dropdown
 
 // Botón toggle
-$color-navbar-toggler-border: #3d0e47; // Borde del botón hamburguesa
+$color-navbar-toggler-border: #52235e; // Borde del botón hamburguesa
 
 // Tipografía
 $font-titulo: "Fredericka the Great", serif;
@@ -28,5 +28,6 @@ $font-parrafo: "Noto Sans Mono", monospace;
 $font-navbar: "Crimson Pro", serif;
 $font-footer-text: "Libre Bodoni", serif;
 $font-footer-title: "Lacquer", system-ui;
+
 
 
